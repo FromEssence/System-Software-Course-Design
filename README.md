@@ -1,2 +1,3 @@
-# Node.js
-System Software Course Design
+# System Software Course Design
+Backend, using Node.js.
+
