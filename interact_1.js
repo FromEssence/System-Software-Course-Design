@@ -1,14 +1,6 @@
 var express = require('express');
 var app = express();
 
-var URL = require('url');
-//
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-    host     : '',
-    user     : 'root',
-    password : '',
-    database : 'test'
   });
 ///
 app.listen(8888);
@@ -32,5 +24,5 @@ app.get('/getData', function(rep, res, next){
       var json = JSON.stringify(result);
       console.log(json);
     });
-    //connection.end();
+
 });
