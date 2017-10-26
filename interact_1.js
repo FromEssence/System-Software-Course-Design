@@ -1,14 +1,6 @@
 var express = require('express');
 var app = express();
 
-var URL = require('url');
-//
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-    host     : '',
-    user     : 'root',
-    password : '',
-    database : 'test'
   });
 ///
 app.listen(8888);
