@@ -1,3 +1,3 @@
-# System Software Course Design
+# System
 Backend, using Node.js.
 
