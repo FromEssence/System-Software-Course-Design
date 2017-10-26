@@ -32,5 +32,5 @@ app.get('/getData', function(rep, res, next){
       var json = JSON.stringify(result);
       console.log(json);
     });
-    //connection.end();
+
 });
