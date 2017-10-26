@@ -2,15 +2,7 @@ var api = require('./api');
 
 var _app = null;
 /// error handlers
-var errorHandler404 = function(req, res, next) {
-    var err = new Error('404 Not Found!');
-    err.status = 404;
-    next(err);
-};
-var errorHandler500 = function(err, req, res, next) {
-    res.status(err.status || 500);
-    var contentType = req.get('Content-Type');
-};
+var err
 
 module.exports = {
     init: function(app) {
