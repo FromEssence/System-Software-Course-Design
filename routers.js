@@ -1,8 +1,15 @@
 ///Routers
 router.post('/address', function(req, res){
     console.log("post address receieved");
-    var data = req.body.userid;
-    var sql = 'select '
+    var id = req.body.userid;
+    var qur = ['AddressRegion', 'AddressRegion', 'Postcode', 'UserName', 'PhoneNumber', 'users', 'UserId', id];
+    var sql = 'select ??, ??, ??, ??, ?? from ?? where ?? = ?';
+    sql = mysql.format(sql, qur);
+    pool.qurey(sql, function(error, result){
+      if(error) throw error;
+      var ans = JSON.parse(JSON.stringify(result));
+      res.json(ans);
+    })
 });
 
 router.post('/information', function(req, res){
